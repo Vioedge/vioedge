@@ -1,0 +1,109 @@
+/* Reset some default styles to create a clean slate */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a black and white color theme */
+body {
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+}
+
+header {
+    background-color: #000; /* Black header background */
+    color: #fff; /* White header text */
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+nav ul.menu {
+    list-style: none;
+    display: flex;
+}
+
+nav ul.menu li {
+    margin-right: 20px;
+}
+
+nav ul.menu li:last-child {
+    margin-right: 0;
+}
+
+nav ul.menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Style the search bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    border: none;
+    padding: 5px;
+}
+
+.search-bar button[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Style the video */
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style other sections as needed */
+section {
+    padding: 20px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    nav ul.menu {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    nav ul.menu li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar button[type="submit"] {
+        margin-top: 5px;
+    }
+}
