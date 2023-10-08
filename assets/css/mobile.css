@@ -1,0 +1,135 @@
+
+/* Styles for the Hamburger Menu Icon */
+#menu-toggle {
+    display: none; /* Initially hidden on larger screens */
+    font-size: 24px; /* Adjust the size as needed */
+    color: #333; /* Adjust the color to match your design */
+    position: absolute;
+    top: 20px; /* Adjust the top position as needed */
+    right: 20px; /* Adjust the right position as needed */
+    cursor: pointer;
+}
+
+/* Media Query to Show the Hamburger Menu Icon on Mobile Devices */
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block !important; /* Display the menu icon on screens with a maximum width of 768px (typical for mobile devices). */
+    }
+}
+
+/* Hide the menu icon on larger screens (desktop and tablet) */
+@media (min-width: 769px) {
+    #menu-toggle {
+        display: none !important; /* Hide the menu icon on screens with a minimum width of 769px (desktop and tablet devices). */
+    }
+}
+
+
+/* Style for the hamburger menu icon */
+.menu-icon {
+    cursor: pointer; /* Changes the cursor to a pointer when hovering, indicating it's clickable. */
+    padding: 10px; /* Adds some padding around the icon for spacing. */
+    background-color: transparent; /* Makes the background transparent. */
+    position: fixed; /* Fixes the position of the icon on the screen. */
+    top: 0; /* Positions it at the top of the screen. */
+    right: 0; /* Positions it at the right-hand corner of the screen. */
+    z-index: 1; /* Sets the stacking order, ensuring it's above other content. */
+}
+
+/* Style for the hamburger menu icon image */
+.menu-icon img {
+    width: 48px; /* Adjusts the width of the image (icon). */
+    height: 48px; /* Adjusts the height of the image (icon). */
+}
+
+/* Style for the mobile menu */
+.menu {
+    display: none; /* Initially hides the menu. */
+    width: 5000px; /* Sets the width of the menu. */
+    height: 100%; /* Sets the height of the menu to cover the entire viewport. */
+    position: fixed; /* Fixes the position of the menu on the screen. */
+    top: 0; /* Positions it at the top of the screen. */
+    right: -250px; /* Positions it off-screen to the right (hidden). */
+    background-color: rgba(0, 0, 0, 0); /* Sets a transparent background color (adjust the last value for transparency). */
+    padding-top: 50px; /* Adds padding to the top for content spacing. */
+    transition: right 0.3s ease; /* Adds a smooth transition effect for sliding. */
+}
+
+/* Style for the menu items */
+.menu ul {
+    list-style-type: none; /* Removes the default list style. */
+    padding: 0; /* Removes padding from the menu list. */
+}
+
+.menu ul li {
+    padding: 10px; /* Adds padding to each menu item for spacing. */
+    text-align: center; /* Centers the text within each menu item. */
+}
+
+/* Style for menu item links */
+.menu ul li a {
+    color: #fff; /* Sets the text color of menu item links to white. */
+    text-decoration: none; /* Removes underlines from the links. */
+}
+
+/* When the checkbox is checked, slide the menu in from the right */
+#menu-toggle:checked + .menu {
+    right: 0; /* Slides the menu in from the right when the checkbox is checked. */
+}
+
+/* Style for the search box in mobile.css */
+.search-box {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Adjust the margin as needed */
+    background-color: #fff; /* Background color of the search box */
+    border-radius: 4px; /* Rounded corners */
+    padding: 5px;
+    border: 1px solid #ccc; /* Border style */
+}
+
+#search-input {
+    flex: 1; /* Allow the input to expand and fill available space */
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+#search-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style for the hamburger menu icon container */
+.icon-container {
+    position: relative;
+    width: 48px; /* Adjust as needed */
+    height: 48px; /* Adjust as needed */
+}
+
+/* Style for the default hamburger icon (visible by default) */
+.icon-container img:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1; /* Fully visible by default */
+    transition: opacity 0.3s ease; /* Smooth opacity transition */
+}
+
+/* Style for the hover hamburger icon (hidden by default) */
+.icon-container img:last-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Smooth opacity transition */
+}
+
+.menu-icon:hover .icon-container img:first-child {
+    opacity: 0; /* Hide the default icon */
+}
+
+.menu-icon:hover .icon-container img:last-child {
+    opacity: 1; /* Show the hover icon */
+}
