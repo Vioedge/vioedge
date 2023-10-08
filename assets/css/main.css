@@ -1,11 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
 @import url("fontawesome-all.min.css");
 
-/*
-	Aerial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -211,36 +206,52 @@ input, select, textarea {
 
 /* BG */
 
-	#bgVideo {
-		opacity: 0.8; 
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: auto;
-		object-fit: cover;
-		z-index: -1;
-	}
+#bgVideo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center top;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    /* Additional styles for professional appearance */
+    border: none; /* Remove borders if any */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+}
 
-	#bgVideoContainer {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 100vh; /* Ensures the container covers the entire viewport height */
-	}
+/* Container for the Video */
+#bgVideoContainer {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio for responsive design */
+}
 	
+/* Media Query for Smaller Screens (e.g., tablets and mobiles) */
+@media (max-width: 768px) {
+    #bgVideo {
+        /* Adjust video size and other styles for smaller screens */
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        object-position: center top;
+    }
+    #bgVideoContainer {
+        padding-bottom: 100vh; /* 100% height for tablets and mobiles */
+    }
+}
 
-	@media (max-width: 768px) {
-		#bgVideoContainer {
-			height: auto;
-		}
-		#bgVideo {
-			height: auto;
-			max-height: 100%; /* Ensures the video doesn't overflow its container */
-		}
-	}
-	
-
+@media (max-width: 1024px) {
+    #bgVideo {
+        /* Adjust video size and other styles for smaller screens */
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        object-position: center top;
+    }
+    #bgVideoContainer {
+        padding-bottom: 100vh; /* 100% height for tablets and mobiles */
+    }
+}
 
 	
 /* Overlay */
@@ -749,6 +760,8 @@ input, select, textarea {
 			background-size: 1500px auto;
 			width: 4500px;
 		} }
+
+		
 
 /* Normal */
 
