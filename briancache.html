@@ -42,7 +42,15 @@
 
         /* Hide the download button in -webkit-media-controls */
 video::-webkit-media-controls-download-button {
-    display: none;
+    display: none !important;
+}
+
+video::-internal-media-controls-download-button {
+    display:none !important;
+}
+
+video::-webkit-media-controls-enclosure {
+    overflow:hidden !important;
 }
 
     </style>
