@@ -13,7 +13,8 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('3d-model-viewer').appendChild(renderer.domElement);
 
 // Import OBJLoader2
-import { OBJLoader2 } from 'three/examples/jsm/loaders/OBJLoader2.js';
+import { OBJLoader2 } from './three.js/examples/jsm/loaders/OBJLoader2.js';
+
 
 // Create an instance of the OBJLoader2
 const loader = new OBJLoader2();
