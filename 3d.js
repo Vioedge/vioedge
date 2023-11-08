@@ -12,17 +12,13 @@ const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('3d-model-viewer').appendChild(renderer.domElement);
 
-// Import OBJLoader2
-import { OBJLoader2 } from './three.js/examples/jsm/loaders/OBJLoader2.js';
+// Import the OBJLoader
+import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
 
-
-// Create an instance of the OBJLoader2
-const loader = new OBJLoader2();
-
-// Load your 3D model
-loader.load('https://raw.githubusercontent.com/Vioedge/vioedge.github.io/main/matrix.obj', (object) => {
+// Load your 3D model using a loader
+const loader = new OBJLoader();
+loader.load('models\Elonmusk.obj', (object) => {
     scene.add(object);
-    animate(); // Call animate() after the model is loaded.
 });
 
 // Add lighting if necessary
