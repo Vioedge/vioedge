@@ -14,7 +14,7 @@
     </header>
 
     <section id="leadForm">
-        <form id="downloadForm" action="submit_form.php" method="post">
+        <form id="downloadForm" action="https://formspree.io/f/xzblqbzz" method="post">
             <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -26,8 +26,17 @@
     </section>
 
     <footer>
-        <p>© 2023 Your Content Creation Business</p>
+        <span class="copyright">&copy; VioEdge. All rights reserved. 2023.</span>
     </footer>
+
+    <script>
+        document.getElementById("downloadForm").addEventListener("submit", function() {
+            // Redirect to the Google Drive PDF link after a short delay
+            setTimeout(function() {
+                window.location.href = "https://drive.google.com/uc?export=download&id=1NufcBgT5EuCjOpoddsP8gNpoWZnl0FR4";
+            }, 500);
+        });
+    </script>
 
 </body>
 </html>
