@@ -1,0 +1,65 @@
+/* Reset default margin and padding */
+body, h1, h2, p, a {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif; /* Set your preferred font family */
+    background-color: #fff; /* Background color */
+    color: #000; /* Text color */
+  }
+  
+  /* Hero section styles */
+  .hero {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .hero-title {
+    font-size: 36px; /* Adjust size */
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .tagline {
+    font-size: 18px; /* Adjust size */
+    margin-bottom: 20px;
+  }
+  
+  .subheadline {
+    font-size: 16px; /* Adjust size */
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000; /* Button background color */
+    color: #fff; /* Button text color */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px; /* Adjust size */
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #333; /* Button hover background color */
+  }
+  
+  /* Feature section styles */
+  .feature {
+    padding: 50px;
+  }
+  
+  .feature-title {
+    font-size: 24px; /* Adjust size */
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .feature-description {
+    font-size: 16px; /* Adjust size */
+    margin-bottom: 20px;
+  }
+  
