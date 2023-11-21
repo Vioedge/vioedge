@@ -1,0 +1,218 @@
+/* Reset default margin and padding */
+body, h1, h2, p, a, ul, li, form {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eff3f0;
+  padding: 20px;
+}
+
+.menu-left ul,
+.menu-right ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu-left ul li,
+.menu-right ul li {
+  margin: 0 10px;
+}
+
+.logo img {
+  max-width: 150px;
+  height: auto;
+}
+
+/* Contact Page Styles */
+.contact {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.contact-content {
+  width: 70%;
+  padding: 80px;
+  text-align: left;
+}
+
+.contact-heading {
+  font-size: 48px;
+  color: #333;
+  font-weight: bold;
+}
+
+.contact-form {
+  margin-top: 40px;
+}
+
+.form-group {
+  margin-bottom: 40px;
+}
+
+label {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: calc(100% - 30px); /* Adjust for border and padding */
+  padding: 16px;
+  border: none;
+  border-bottom: 2px solid #333;
+  background-color: transparent;
+  transition: border-bottom-color 0.3s ease;
+  font-size: 20px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  outline: none;
+  border-bottom-color: #555; /* Adjust on focus */
+}
+
+textarea {
+  width: calc(100% - 30px); /* Adjust for border and padding */
+  height: 120px; /* Fixed height for the textarea */
+  padding: 16px;
+  border: none;
+  border-bottom: 2px solid #333;
+  background-color: transparent;
+  transition: border-bottom-color 0.3s ease;
+  font-size: 20px;
+  resize: none; /* Disable textarea resizing */
+}
+
+textarea:focus {
+  outline: none;
+  border-bottom-color: #555; /* Adjust on focus */
+}
+
+input[type="submit"] {
+  padding: 16px 30px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 20px;
+}
+
+input[type="submit"]:hover {
+  background-color: #555;
+}
+
+.contact-information {
+  background-color: #eff3f0;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact-info-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #000;
+}
+
+.contact-info-wrapper h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.contact-info-wrapper ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info-wrapper li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Ensure consistency as users scroll */
+.contact-information.fixed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+/* Additional CSS for FAQ section */
+.faqs {
+  background-color: #eff3f0;
+  padding: 80px 20px;
+  text-align: center;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.faqs-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faqs-wrapper h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.line {
+  width: 50px;
+  height: 2px;
+  background-color: #000;
+  margin: 0 auto 20px;
+}
+
+.accordion {
+  background-color: transparent;
+  color: #333;
+  cursor: pointer;
+  padding: 20px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: background-color 0.4s ease;
+  font-size: 18px;
+}
+
+.accordion.active {
+  background-color: #f0f0f0;
+}
+
+.panel {
+  padding: 0 20px;
+  display: none;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.panel.show {
+  display: block;
+  padding: 20px;
+}
+
+.arrow {
+  float: right;
+  transition: transform 0.3s ease;
+}
+
+.active .arrow {
+  transform: rotate(180deg);
+}
+

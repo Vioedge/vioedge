@@ -6,23 +6,23 @@
   <link rel="stylesheet" href="NewWebsiteDesign.css">
 </head>
 <body>
-  <header class="header">
-    <nav class="menu-left">
-      <ul>
-        <li><a href="#">Menu Item 1</a></li>
-        <li><a href="#">Menu Item 2</a></li>
-      </ul>
-    </nav>
-    <div class="logo">
-      <!-- Your logo here -->
-    </div>
-    <nav class="menu-right">
-      <ul>
-        <li><a href="#">Menu Item 3</a></li>
-        <li><a href="#">Menu Item 4</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header class="header">
+        <nav class="menu-left">
+          <ul>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+          </ul>
+        </nav>
+        <div class="logo">
+          <img src="Logo.svg" alt="Your Company Logo">
+        </div>
+        <nav class="menu-right">
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+          </ul>
+        </nav>
+    </header>
 
   <section class="hero">
     <div class="hero-content">
@@ -33,10 +33,139 @@
     </div>
   </section>
 
-  <section class="feature">
-    <h2 class="feature-title">Tailored Content Creation</h2>
-    <p class="feature-description">At [Your Company Name], we understand that one size does not fit all when it comes to content...</p>
-  </section>
+<section class="feature-highlights">
+    <h2 class="feature-highlights-heading">FEATURE HIGHLIGHTS</h2>
+    <div class="features">
+        <div class="feature">
+          <img src="Pencil.svg" alt="Icon 1" class="feature-icon">
+            <div class="feature-content">
+                <h3 class="feature-title">Tailored Content Creation</h3>
+                <p class="feature-description"> Personalized content that boosts your brand's voice.</p>
+            </div>
+        </div>
+        <div class="feature">
+          <img src="path/to/your/svg_or_image_1.svg" alt="Icon 2" class="feature-icon">
+            <div class="feature-content">
+                <h3 class="feature-title">Content Calendar Planning</h3>
+                <p class="feature-description">Plan content strategically for steady growth.</p>
+            </div>
+        </div>
+        <div class="feature">
+          <img src="path/to/your/svg_or_image_1.svg" alt="Icon 3" class="feature-icon">
+            <div class="feature-content">
+                <h3 class="feature-title">Optimized Delivery</h3>
+                <p class="feature-description">Fast, precise content delivery for clients every time.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="split-layout">
+    <div class="split-content">
+      <h2 class="split-heading">VIDEO CAROUSEL</h2>
+      <p class="split-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet magna vitae metus vestibulum, a faucibus neque tincidunt. Vestibulum mollis vestibulum nunc, ac vestibulum purus eleifend vel.</p>
+    </div>
+    <div class="video-carousel">
+      <h2 class="carousel-heading">Our Videos</h2>
+      <div class="carousel">
+        <button class="carousel-arrow left">&#8249;</button>
+        <div class="video-slide">
+          <iframe src="video_link_1" frameborder="0" allowfullscreen></iframe>
+          <p>Video description goes here.</p>
+        </div>
+        <div class="video-slide">
+          <iframe src="video_link_2" frameborder="0" allowfullscreen></iframe>
+          <p>Video description goes here.</p>
+        </div>
+        <!-- Add more video slides as needed -->
+        <button class="carousel-arrow right">&#8250;</button>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+<script>// Reset scroll position to top on page reload
+
+// Save scroll position when navigating away from the page
+window.addEventListener('beforeunload', function() {
+  sessionStorage.setItem('scrollPosition', window.scrollY);
+});
+
+// Restore scroll position on page load
+window.addEventListener('load', function() {
+  const scrollPosition = sessionStorage.getItem('scrollPosition');
+  const scrollThreshold = 50; // Threshold distance from top to trigger scroll restoration
+
+  if (scrollPosition && scrollPosition > scrollThreshold) {
+    window.scrollTo(0, scrollPosition);
+    sessionStorage.removeItem('scrollPosition');
+  }
+});
+
+
+
+    try {
+      // Code that might throw an error
+      // ...
+    } catch (error) {
+      // Handle the error gracefully
+      console.error('An error occurred:', error);
+    } finally {
+      // Code to execute regardless of whether an error occurred or not
+      // ...
+    }
+
+    // Event Handling (Event Delegation)
+        document.addEventListener('click', function(event) {
+      if (event.target.matches('.specificChildElementClass')) {
+        // Handling click on specific child elements
+        // ...
+      }
+    });
+
+        // Avoiding Global Scope Pollution
+        (function() {
+      // Your code here
+    })();
+
+    // Asynchronous Code Handling (Promises)
+    function fetchData(url) {
+      return new Promise((resolve, reject) => {
+        fetch(url)
+          .then(response => response.json())
+          .then(data => resolve(data))
+          .catch(error => reject(error));
+      });
+    }
+
+        // Using the fetchData function
+        fetchData('https://api.example.com/data')
+      .then(data => {
+        // Handle fetched data
+        // ...
+      })
+      .catch(error => {
+        // Handle errors
+        console.error('Error fetching data:', error);
+      });
+
+          // Code Readability and Maintainability
+    function calculateArea(width, height) {
+      // Calculate area
+      const area = width * height;
+      return area;
+    }
+
+    // Optimization
+    const items = [/*...*/];
+    for (let i = 0, len = items.length; i < len; i++) {
+      // Do something with each item
+    }
+
+
+</script>
+
 
   <!-- Repeat the above structure for other features -->
 
