@@ -17,6 +17,13 @@ header {
   padding: 20px;
 }
 
+.menu-left,
+.menu-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
 .menu-left ul,
 .menu-right ul {
   list-style: none;
@@ -26,11 +33,27 @@ header {
 .menu-left ul li,
 .menu-right ul li {
   margin: 0 10px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
+
+.menu-left ul li a,
+.menu-right ul li a {
+  color: #000; /* Set link color to black */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Add transition for color change */
+}
+
+.menu-left ul li a:hover,
+.menu-right ul li a:hover {
+  color: #333; /* Darken the color on hover */
+}
+
 
 .logo img {
   max-width: 150px;
-  height: auto; }
+  height: auto;
+}
 
   
 /* Hero section styles */

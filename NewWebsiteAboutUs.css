@@ -1,0 +1,148 @@
+   /* Your CSS styles */
+    /* Centering everything */
+/* Global styles */
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 60px auto; /* Add margin-top and margin-bottom for space */
+    text-align: center;
+    padding: 20px;
+}
+
+/* About Us section styles */
+.about-us-heading {
+    font-size: 42px; /* Increased heading font size */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px; /* Margin for the heading */
+    color: #000;
+}
+
+.about-us-divider {
+    width: 40%; /* Match the width of the divider to the heading */
+    border: none;
+    border-bottom: 1px solid #000;
+    margin: 0 auto 30px auto; /* Margin for separation */
+}
+
+.about-us-subheading {
+    font-size: 16px; /* Smaller font size for the one-word subheading */
+    color: #000;
+    margin-bottom: 30px; /* Margin for separation */
+    letter-spacing: 4px; /* Increased letter spacing */
+}
+
+/* About Us section styles */
+.passion-text {
+    font-size: 10px; /* Very small font size for the passion text */
+    letter-spacing: 4px; /* Increased letter spacing */
+    margin-top: 0px; /* Move down to 50% of the container */
+    transform: translateY(-50%); /* Adjust vertical alignment */
+    color: #000;
+    background-color: #eff3f0; /* Background color */
+    padding: 10px; /* Padding for the background */
+}
+
+.about-us-description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: gray;
+    margin: 20px; 
+    margin: 20px;/* Add margin to create space on top and bottom */
+    text-align: center; /* Center-align the text */
+    max-width: 200%; /* Set a maximum width to limit content */
+    display: block; /* Ensure it spans the width */
+    margin-left: auto; /* Adjust for even horizontal spacing */
+    margin-right: auto; /* Adjust for even horizontal spacing */
+  }
+  
+  .single-word {
+    display: block;
+    font-size: 16px;
+    color: gray;
+    text-align: center; /* Center-align the text */
+    max-width: 80%; /* Set a maximum width to limit content */
+    margin-left: auto; /* Adjust for even horizontal spacing */
+    margin-right: auto; /* Adjust for even horizontal spacing */
+  }
+
+.small-divider {
+    width: 50px; /* Small divider width */
+    border: none;
+    border-bottom: 1px solid #000; /* Small divider style */
+    margin: 0 auto; /* Center the small divider */
+    margin-top: -10px;
+    margin-bottom: 40px; /* Margin at the bottom */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-bottom: 80px; /* Margin at the bottom */
+}
+
+.cta-button:hover {
+    background-color: #333; /* Hover background color */
+}
+
+
+    /* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eff3f0;
+    padding: 20px;
+}
+
+.menu-left,
+.menu-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-left ul,
+.menu-right ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu-left ul li,
+.menu-right ul li {
+    margin: 0 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.menu-left ul li a,
+.menu-right ul li a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu-left ul li a:hover,
+.menu-right ul li a:hover {
+    color: #333;
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+}

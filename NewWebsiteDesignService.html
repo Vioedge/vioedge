@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Content Creation Services</title>
+  <link rel="stylesheet" href="NewWebsiteDesignService.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="menu-left">
+          <ul>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+          </ul>
+        </nav>
+        <div class="logo">
+          <a href="NewWebsiteDesign.html">
+            <img src="Logo.svg" alt="Your Company Logo">
+          </a>
+        </div>
+        <nav class="menu-right">
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+      <div class="container">
+        <!-- Service 1 -->
+        <div id="service1" class="service">
+          <div class="service-heading">
+            <hr class="medium-divider">
+            <h1 class="service-name">Video Editing</h1>
+            <h2 class="service-type">Services</h2>
+          </div>
+          <hr class="small-divider">
+          <div class="service-details">
+            <p class="tagline">Crafting Seamless Visual Stories for Your Success</p>
+            <p class="description">Our video editing services transform raw footage into compelling visual narratives. From professional cuts to captivating effects, we're dedicated to enhancing your videos.</p>
+            <a href="#" class="cta-button">Get Started</a>
+          </div>
+        </div>
+      
+<!-- Service 2 -->
+<div id="service2" class="service" style="display: none;">
+    <div class="service-heading">
+        <h1 class="service-name">Content Writing</h1>
+        <h2 class="service-type">Services</h2>
+    </div>
+    <hr class="small-divider">
+    <div class="service-details">
+        <div class="content-writing">
+            <p class="tagline">Engaging Content for Your Audience</p>
+            <p class="description">Our content writing services focus on delivering compelling and relevant content that resonates with your audience.</p>
+            <a href="#" class="cta-button">Get Started</a>
+        </div>
+    </div>
+</div>
+
+  
+      
+        <!-- Service 3 -->
+        <div id="service3" class="service" style="display: none;">
+          <div class="service-heading">
+            <h1 class="service-name">Graphic Design</h1>
+            <h2 class="service-type">Services</h2>
+          </div>
+          <hr class="small-divider">
+          <div class="service-details">
+            <p class="tagline">Creating Stunning Visual Identities</p>
+            <p class="description">Our graphic design services establish a strong visual brand presence.</p>
+            <a href="#" class="cta-button">Get Started</a>
+          </div>
+        </div>
+
+<!-- Service 4 -->
+<div id="service4" class="service" style="display: none;">
+    <div class="service-heading">
+      <h1 class="service-name">SEO Optimization</h1>
+      <h2 class="service-type">Services</h2>
+    </div>
+    <hr class="small-divider">
+    <div class="service-details">
+      <p class="tagline">Enhance Visibility and Ranking</p>
+      <p class="description">Our SEO optimization services focus on boosting your website's visibility and search engine rankings. We conduct thorough keyword research, on-page and off-page optimization, and provide detailed analytics to improve your online presence.</p>
+      <a href="#" class="cta-button">Get Started</a>
+    </div>
+</div>
+
+<!-- Service 5 -->
+<div id="service5" class="service" style="display: none;">
+    <div class="service-heading">
+      <h1 class="service-name">3D Model</h1>
+      <h2 class="service-type">Services</h2>
+    </div>
+    <hr class="small-divider">
+    <div class="service-details">
+      <p class="tagline">3D Models using AI</p>
+      <p class="description">Our AI 3D model services leverage AI to transform images into 3D models. From product prototypes to logos, we create creative and realistic visuals.</p>
+      <a href="#" class="cta-button">Get Started</a>
+    </div>
+</div>
+
+<!-- Service 6 -->
+<div id="service6" class="service" style="display: none;">
+    <div class="service-heading">
+      <h1 class="service-name">Customized Website Image</h1>
+      <h2 class="service-type">Services</h2>
+    </div>
+    <hr class="small-divider">
+    <div class="service-details">
+      <p class="tagline">Tailored Images for Your Website</p>
+      <p class="description">Our customized website image creation services provide tailor-made visuals that complement and enhance your website. From unique banners to optimized graphics, we create images that resonate with your brand and captivate your audience.</p>
+      <a href="#" class="cta-button">Get Started</a>
+    </div>
+</div>
+      
+  <!-- Pagination -->
+  <div class="pagination">
+    <span class="pagination-dot active" onclick="showService(1)"></span>
+    <span class="pagination-dot" onclick="showService(2)"></span>
+    <span class="pagination-dot" onclick="showService(3)"></span>
+    <span class="pagination-dot" onclick="showService(4)"></span>
+    <span class="pagination-dot" onclick="showService(5)"></span>
+    <span class="pagination-dot" onclick="showService(6)"></span>
+  </div>
+</div>
+
+<script>
+  function showService(serviceNumber) {
+    var services = document.querySelectorAll('.service');
+    var dots = document.querySelectorAll('.pagination-dot');
+
+    for (var i = 0; i < services.length; i++) {
+      services[i].style.display = 'none';
+      dots[i].classList.remove('active');
+    }
+
+    services[serviceNumber - 1].style.display = 'block';
+    dots[serviceNumber - 1].classList.add('active');
+  }
+
+  document.addEventListener('keydown', function(event) {
+    var activeIndex = document.querySelector('.pagination-dot.active');
+    var dots = document.querySelectorAll('.pagination-dot');
+    var newIndex;
+
+    switch(event.keyCode) {
+        case 37: // Left arrow key
+            newIndex = Array.from(dots).indexOf(activeIndex) - 1;
+            break;
+        case 39: // Right arrow key
+            newIndex = Array.from(dots).indexOf(activeIndex) + 1;
+            break;
+        default:
+            return;
+    }
+
+    if (newIndex >= 0 && newIndex < dots.length) {
+        activeIndex.classList.remove('active');
+        dots[newIndex].classList.add('active');
+        showService(newIndex + 1);
+    }
+});
+
+</script>
+  
+  </body>
+  </html>
