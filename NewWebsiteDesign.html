@@ -6,25 +6,25 @@
   <link rel="stylesheet" href="NewWebsiteDesign.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="menu-left">
-          <ul>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-          </ul>
-        </nav>
-        <div class="logo">
-          <a href="NewWebsiteDesign.html">
-            <img src="Logo.svg" alt="Your Company Logo">
-          </a>
-        </div>
-        <nav class="menu-right">
-          <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-          </ul>
-        </nav>
-    </header>
+  <header class="header">
+    <nav class="menu-left">
+      <ul>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+      </ul>
+    </nav>
+    <div class="logo">
+      <a href="NewWebsiteDesign.html">
+          <img src="Logo.svg" alt="Your Company Logo">
+      </a>
+  </div>
+    <nav class="menu-right">
+      <ul>
+        <li><a href="NewWebsiteAboutUs.html">About Us</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+</header>
 
   <section class="hero">
     <div class="hero-content">
@@ -63,27 +63,27 @@
 </section>
 
 <div class="split-layout">
-    <div class="split-content">
-      <h2 class="split-heading">VIDEO CAROUSEL</h2>
-      <p class="split-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet magna vitae metus vestibulum, a faucibus neque tincidunt. Vestibulum mollis vestibulum nunc, ac vestibulum purus eleifend vel.</p>
-    </div>
-    <div class="video-carousel">
-      <h2 class="carousel-heading">Our Videos</h2>
-      <div class="carousel">
-        <button class="carousel-arrow left">&#8249;</button>
-        <div class="video-slide">
-          <iframe src="video_link_1" frameborder="0" allowfullscreen></iframe>
-          <p>Video description goes here.</p>
-        </div>
-        <div class="video-slide">
-          <iframe src="video_link_2" frameborder="0" allowfullscreen></iframe>
-          <p>Video description goes here.</p>
-        </div>
-        <!-- Add more video slides as needed -->
-        <button class="carousel-arrow right">&#8250;</button>
+  <div class="split-content">
+    <h2 class="split-heading">Elevating Brands Through Creative Content</h2>
+  </div>
+  <div class="video-carousel">
+    <h2 class="carousel-heading">Our Videos</h2>
+    <div class="carousel">
+      <button class="carousel-arrow left">&#8249;</button>
+      <div class="video-slide">
+        <iframe src="video_link_1" frameborder="0" allowfullscreen></iframe>
+        <p>Video description goes here.</p>
       </div>
+      <div class="video-slide">
+        <iframe src="video_link_2" frameborder="0" allowfullscreen></iframe>
+        <p>Video description goes here.</p>
+      </div>
+      <!-- Add more video slides as needed -->
+      <button class="carousel-arrow right">&#8250;</button>
     </div>
   </div>
+</div>
+
   
   
   
@@ -164,6 +164,16 @@ window.addEventListener('load', function() {
     for (let i = 0, len = items.length; i < len; i++) {
       // Do something with each item
     }
+
+    // JavaScript
+window.addEventListener('scroll', function() {
+  var header = document.querySelector('header');
+  if (window.scrollY > 50) { // Change 50 to the desired scroll position
+    header.classList.add('sticky-header');
+  } else {
+    header.classList.remove('sticky-header');
+  }
+});
 
 
 </script>

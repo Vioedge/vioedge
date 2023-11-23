@@ -14,31 +14,34 @@
       </ul>
     </nav>
     <div class="logo">
-      <img src="Logo.svg" alt="Your Company Logo">
+      <a href="NewWebsiteDesign.html">
+        <img src="Logo.svg" alt="Your Company Logo">
+      </a>
     </div>
     <nav class="menu-right">
       <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="NewWebsiteAboutUs.html">About Us</a></li>
+        <li><a href="Contact.html">Contact</a></li>
       </ul>
     </nav>
 </header>
+<main>
 
   <section class="contact" style="background-color: #eff3f0;">
     <div class="contact-content">
       <h1 class="contact-heading">Contact Us</h1>
-      <form class="contact-form">
+      <form class="contact-form" onsubmit="return validateForm()">
         <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your Name">
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Your Email">
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
         </div>
         <div class="form-group">
           <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Your Message"></textarea>
+          <textarea id="message" name="message" placeholder="Your Message" required></textarea>
         </div>
         <input type="submit" value="Submit">
       </form>
@@ -49,17 +52,18 @@
     <div class="faqs-wrapper">
       <h2>FAQ</h2>
       <div class="line"></div>
-      <button class="accordion">Question 1 <span class="arrow">&#9662;</span></button>
-      <div class="panel">
+      <button class="accordion" aria-expanded="false" aria-controls="panel1">Question 1 <span class="arrow">&#9662;</span></button>
+      <div id="panel1" class="panel" aria-hidden="true">
         <p>Answer 1</p>
       </div>
-      <button class="accordion">Question 2 <span class="arrow">&#9662;</span></button>
-      <div class="panel">
+      <button class="accordion" aria-expanded="false" aria-controls="panel2">Question 2 <span class="arrow">&#9662;</span></button>
+      <div id="panel2" class="panel" aria-hidden="true">
         <p>Answer 2</p>
       </div>
       <!-- Add more FAQ items as needed -->
     </div>
   </section>
+</main>
 
   <script>let accordions = document.getElementsByClassName("accordion");
 
@@ -74,6 +78,31 @@
         }
       });
     }
+
+    function validateForm() {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let message = document.getElementById("message").value;
+
+  // Simple validation
+  if (name === "" || email === "" || message === "") {
+    alert("Please fill in all fields.");
+    return false;
+  }
+
+  // Email format validation (using a simple regex pattern)
+  let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!email.match(emailPattern)) {
+    alert("Please enter a valid email address.");
+    return false;
+  }
+
+  // Additional validation logic can be added here if needed
+
+  // If all validations pass, the form will submit
+  return true;
+}
+
     </script>
   
 </body>

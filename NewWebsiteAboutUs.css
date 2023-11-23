@@ -6,7 +6,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-color: #eff3f0;
     color: #333;
 }
 
@@ -101,12 +101,12 @@ body {
 }
 
 
-    /* Header styles */
+/* Header styles */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #eff3f0;
+    background-color: #f8f8f8; /* Light gray header background */
     padding: 20px;
 }
 

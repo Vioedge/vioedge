@@ -10,16 +10,23 @@ body, h1, h2, p, a, ul, li {
   
 /* Header styles */
 header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #eff3f0;
+  background-color: #f8f8f8; /* Light gray header background */
   padding: 20px;
+}
+
+.logo img {
+  max-width: 150px;
+  height: auto;
 }
 
 .menu-left,
 .menu-right {
-  flex: 1;
   display: flex;
   justify-content: center;
 }
@@ -28,6 +35,8 @@ header {
 .menu-right ul {
   list-style: none;
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 .menu-left ul li,
@@ -39,16 +48,15 @@ header {
 
 .menu-left ul li a,
 .menu-right ul li a {
-  color: #000; /* Set link color to black */
-  text-decoration: none; /* Remove underline */
-  transition: color 0.3s ease; /* Add transition for color change */
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .menu-left ul li a:hover,
 .menu-right ul li a:hover {
-  color: #333; /* Darken the color on hover */
+  color: #333;
 }
-
 
 .logo img {
   max-width: 150px;
@@ -58,7 +66,7 @@ header {
   
 /* Hero section styles */
 .hero {
-    background-color: #eff3f0; /* Replace #FF0000 with the desired color code */
+    background-color: #f8f8f8; /* Replace #FF0000 with the desired color code */
     color: #000; /* Set hero text color to black */
     text-align: center;
     padding: 100px 0;
@@ -251,3 +259,22 @@ header {
     cursor: pointer;
     background: none;
   }
+
+  /* Layered Text Scroll Styles */
+  .scroll-text {
+    border: 1px solid #ccc; /* Optional: Add borders or style as needed */
+  }
+  
+  .scroll-text-inner {
+    animation: scrollText 10s linear infinite; /* Change duration as needed */
+  }
+  
+  @keyframes scrollText {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  
