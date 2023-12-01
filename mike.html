@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="veteransday.css">
+    <title>Boost Your Content Strategy - Free Guide</title>
+    <meta name="description" content="Free Guide">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900" rel="stylesheet">
+    <link rel="icon" href="assets/css/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <h1>Unlock the Power of Content</h1>
+        <p>Download your FREE guide now!</p>
+    </header>
+
+    <section id="leadForm">
+        <form id="downloadForm" action="https://getform.io/f/17ca5eb1-1368-4825-ab6e-7efb29454521" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="submit">Download Now</button>
+        </form>
+    </section>
+
+    <footer>
+        <span class="copyright">&copy; VioEdge. All rights reserved. 2023.</span>
+    </footer>
+
+    <script>
+        document.getElementById("downloadForm").addEventListener("submit", function() {
+            // Redirect to the Google Drive PDF link after a short delay
+            setTimeout(function() {
+                window.location.href = "https://drive.google.com/uc?export=download&id=1QEPAC7NlmwGzV0ehtDnKHzgxn9PVzNRo";
+            }, 500);
+        });
+    </script>
+
+</body>
+</html>
