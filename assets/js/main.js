@@ -506,7 +506,7 @@
                scrollToTop();
            });
        } else {
-           console.error("Element with id 'scrollToTop' not found.");
+           // console.error("Element with id 'scrollToTop' not found.");
        }
        
     /*
@@ -624,7 +624,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     } else {
-        console.error("Element with id 'generateEmailBtn' not found.");
+        // console.error("Element with id 'generateEmailBtn' not found.");
     }
 });
 
