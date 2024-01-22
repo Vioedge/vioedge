@@ -624,7 +624,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     } else {
-        //  console.error("Element with id 'sendButton' not found.");
+        //console.error("Element with id 'sendButton' not found.");
     }
 });
 
