@@ -506,7 +506,7 @@
                scrollToTop();
            });
        } else {
-           console.error("Element with id 'scrollToTop' not found.");
+           // console.error("Element with id 'scrollToTop' not found.");
        }
        
     /*
