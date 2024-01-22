@@ -483,28 +483,32 @@
        =================================
     */
 
-    const scrollToTopElement = document.getElementById('scrollToTop');
+       const scrollToTopElement = document.getElementById('scrollToTop');
 
-    window.addEventListener('scroll', function() {
-        if (window.scrollY >= 50) {
-            scrollToTopElement.style.display = 'block';
-        } else {
-            scrollToTopElement.style.display = 'none';
-        }
-    });
-    
-    scrollToTopElement.addEventListener('click', function(e) {
-        e.preventDefault();
-        const scrollToTop = function() {
-            const positionY = window.scrollY;
-            if (positionY > 0) {
-                window.scrollBy(0, -50); // Scroll up by 50px
-                setTimeout(scrollToTop, 16);
-            }
-        };
-        scrollToTop();
-    });
-
+       if (scrollToTopElement) {
+           window.addEventListener('scroll', function() {
+               if (window.scrollY >= 50) {
+                   scrollToTopElement.style.display = 'block';
+               } else {
+                   scrollToTopElement.style.display = 'none';
+               }
+           });
+       
+           scrollToTopElement.addEventListener('click', function(e) {
+               e.preventDefault();
+               const scrollToTop = function() {
+                   const positionY = window.scrollY;
+                   if (positionY > 0) {
+                       window.scrollBy(0, -50); // Scroll up by 50px
+                       setTimeout(scrollToTop, 16);
+                   }
+               };
+               scrollToTop();
+           });
+       } else {
+           console.error("Element with id 'scrollToTop' not found.");
+       }
+       
     /*
        =================================
           Work videos home page
@@ -597,22 +601,18 @@ function handleSubmit(email) {
        =================================
     */
 
-       document.addEventListener("DOMContentLoaded", function() {
-        const sendButton = document.getElementById('sendButton');
-        const radioButtons = document.querySelectorAll('input[name="category"]');
+document.addEventListener("DOMContentLoaded", function() {
+    const sendButton = document.getElementById('sendButton');
+    const radioButtons = document.querySelectorAll('input[name="category"]');
     
+    if (sendButton) {
         radioButtons.forEach(radioButton => {
             radioButton.addEventListener('change', function() {
                 const selectedEmail = this.value;
                 sendButton.setAttribute('onclick', `window.location.href = 'mailto:${selectedEmail}'`);
             });
         });
-    });
-    
-    document.addEventListener("DOMContentLoaded", function() {
-        const sendButton = document.getElementById('sendButton');
-        const contactForm = document.getElementById('contactForm');
-    
+
         sendButton.addEventListener('click', function(event) {
             event.preventDefault(); // Prevents the default form submission behavior
     
@@ -623,7 +623,11 @@ function handleSubmit(email) {
                 window.location.href = `mailto:${selectedEmail}`;
             }
         });
-    });
+    } else {
+        console.error("Element with id 'sendButton' not found.");
+    }
+});
+
 
     /*
        =================================
