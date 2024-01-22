@@ -602,7 +602,7 @@ function handleSubmit(email) {
     */
 
 document.addEventListener("DOMContentLoaded", function() {
-    const sendButton = document.getElementById('sendButton');
+    const sendButton = document.getElementById('generateEmailBtn');
     const radioButtons = document.querySelectorAll('input[name="category"]');
     
     if (sendButton) {
@@ -624,7 +624,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     } else {
-        //console.error("Element with id 'sendButton' not found.");
+        console.error("Element with id 'generateEmailBtn' not found.");
     }
 });
 
