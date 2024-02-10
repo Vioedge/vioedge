@@ -664,9 +664,10 @@ document.addEventListener("DOMContentLoaded", function() {
           When document is loaded, do
        =================================
     */
-       $(window).on('load', function () {
-
+       jQuery(document).ready(function($) {
+        $(window).on('load', function () {
+            // Your code for when the window is loaded goes here
+        });
     });
-
 })(window.jQuery);
 
