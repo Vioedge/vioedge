@@ -1836,3 +1836,20 @@ body.dark-screen .normalCursor, .cursor-dark {
         gap: 15px; /* Adjust the gap for smaller screens */
     }
 }
+
+/* Copyright Footer */
+
+
+.footer-copyright {
+    text-align: center;
+    font-size: 14px;
+    color: darkgrey; /* Dark grey color; adjust as needed */
+    padding-bottom: 20px; /* Space below the copyright text */
+}
+
+@media (max-width: 768px) {
+    .footer-copyright {
+        font-size: 12px; /* Smaller font size for smaller screens */
+        padding-bottom: 15px; /* Adjust padding for smaller screens */
+    }
+}
