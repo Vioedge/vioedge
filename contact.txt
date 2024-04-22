@@ -102,7 +102,7 @@
                                             </li>
                                         </ul>
                                     </li>
-                                  <!--  <li>
+                                  <!-- <li>
                                         <a href="/services" class="mega-menu-link hover-underline light-line link-cursor">
                                             <span class="link-text">Services</span>
                                         </a>
@@ -164,106 +164,118 @@
             <!-- Page Heading -->
             <section class="page-heading">
                 <div class="container-fluid">
-                    <div class="heading-page">
+                    <div class="heading-full">
                         <div class="heading-titles">
-                            <h1 class="title">Work,<br/>Clean. Short. Creative.</h1>
+                            <h1 class="title">Get in touch</h1>
+                            <h3 class="title-sub">Complete the brief below with detailed information. Qualification for our services will be based on whether you're the right fit.</h3>
                         </div>
-                    </div>
-                    <div class="scroll-down-project">
-                        <span class="mouse-icon"></span>
-                        Scroll down
+                        <div class="heading-bottom">
+                            <div class="scroll-down">
+                                <span class="mouse-icon"></span>
+                                Scroll down
+                            </div>
+                            <div class="hour current-hour">
+                                loading..
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
             <!-- Page Heading End -->
 
-
-            <!-- Case Grid Start -->
-            <section class="media-grid section-space">
+            <!-- Contact Location -->
+            <section class="contact-loc section-space2x">
                 <div class="container-fluid">
-                    <div class="media-grid-items">
-                        <div class="row nomargin">
-                            <div class="col-12 nopadding">
-                                <a href="ad/one/" class="media-grid-item hover-underline-trigger link-cursor">
-                                    <div class="media-grid-img">
-                                        <img src="assets/images/Poster/work-ad-one-thumbnail.png" alt="Case">
-                                    </div>
-                                    <div class="media-grid-text">
-                                        <h3>Basic</h3>
-                                        <h2 class="hover-underline light-line reverse">
-                                            <span class="link-text">New</span>
-                                        </h2>
-                                    </div>
-                                    <div class="back-animation"></div>
-                                </a>
+                    <div class="row">
+                        <div class="col-md-5 col-12">
+                            <div class="location-item-contact">
+                                <h3 class="section-title">
+                                    <a href="#">Los<br/>-Angles</a>
+                                </h3>
+                                <div class="location-hours">
+                                    <p class="title-sub">Mon—Sun</p>
+                                    <p class="title-sub">09:00—21:00</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="row nomargin">
-                            <div class="col-lg-6 col-12 nopadding">
-                                <a href="ad/two/" class="media-grid-item hover-underline-trigger link-cursor">
-                                    <div class="media-grid-img">
-                                        <img src="assets/images/Poster/work-ad-two-thumbnail.png" alt="Case">
-                                    </div>
-                                    <div class="media-grid-text-work">
-                                        <h3>Basic</h3>
-                                    </div>
-                                    <div class="back-animation"></div>
-                                </a>
-                            </div>
-                            <div class="col-lg-6 col-12 nopadding">
-                                <a href="ad/three/" class="media-grid-item hover-underline-trigger link-cursor">
-                                    <div class="media-grid-img">
-                                        <img src="assets/images/Poster/work-ad-three-thumbnail.png" alt="Case">
-                                    </div>
-                                    <div class="media-grid-text-work">
-                                        <h3>Basic</h3>
-                                    </div>
-                                    <div class="back-animation"></div>
-                                </a>
-                            </div>
-                            <div class="col-lg-6 col-12 nopadding">
-                                <a href="ad/four/" class="media-grid-item hover-underline-trigger link-cursor">
-                                    <div class="media-grid-img">
-                                        <img src="assets/images/Poster/work-ad-four-thumbnail.png" alt="Case">
-                                    </div>
-                                    <div class="media-grid-text-work">
-                                        <h3>Basic</h3>
-                                    </div>
-                                    <div class="back-animation"></div>
-                                </a>
-                            </div>
-                            <div class="col-lg-6 col-12 nopadding">
-                                <a href="ad/five/" class="media-grid-item hover-underline-trigger link-cursor">
-                                    <div class="media-grid-img">
-                                        <img src="assets/images/Poster/work-ad-five-thumbnail.png" alt="Case">
-                                    </div>
-                                    <div class="media-grid-text-work">
-                                        <h3>Basic</h3>
-                                    </div>
-                                    <div class="back-animation"></div>
-                                </a>
+                        <div class="col-md-5 col-12">
+                            <div class="location-item-contact">
+                                <h3 class="section-title">
+                                    <a href="#">New<br/>-York</a>
+                                </h3>
+                                <div class="location-hours">
+                                    <p class="title-sub">Mon—Sun</p>
+                                    <p class="title-sub">09:00—21:00</p>
+                                </div>
                             </div>
                         </div>
-                        <div id="ai-section" class="row nomargin">
-                            <div class="col-12 nopadding">
-                                <a href="ad/ai/" class="media-grid-item hover-underline-trigger link-cursor">
-                                    <div class="media-grid-img">
-                                        <img src="assets/images/Poster/work-ad-seven-thumbnail.png" alt="Case">
-                                    </div>
-                                    <div class="media-grid-text">
-                                        <h3>AI</h3>
-                                        <h2 class="hover-underline light-line reverse">
-                                            <span class="link-text">NEW</span>
-                                        </h2>
-                                    </div>
-                                    <div class="back-animation"></div>
-                                </a>
-                            </div>
-                        </div>                        
                     </div>
                 </div>
+            </section> 
+            <!-- Contact Location End -->
+
+            <!-- Contact Form -->
+            <section class="contact-form section-space">
+                <div class="container-fluid">
+                    <h2 class="section-title">Brief</h2>
+                    <p class="section-subtitle">Share your project and ask questions.<br/>You'll receive a timely response.</p>
+                    <form id="contactForm" class="form">
+                        <!-- Form fields -->
+                        <div class="row">
+                <div class="col-12">
+                    <div class="form-category">
+                        <div class="form-category-item">
+                            <input type="radio" name="category" id="web" class="form-checkbox">
+                            <label for="web" class="form-checkbox-label clickable">Social Media</label>
+                        </div>
+                        <div class="form-category-item">
+                            <input type="radio" name="category" checked id="ad" class="form-checkbox">
+                            <label for="ad" class="form-checkbox-label clickable">Advertising</label>
+                        </div>
+                        <div class="form-category-item">
+                            <input type="radio" name="category" id="branding" class="form-checkbox">
+                            <label for="branding" class="form-checkbox-label clickable">Branding</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-item">
+                        <input type="text" class="form-input" id="form-name" placeholder="Name" required aria-label="Name">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-item">
+                        <input type="text" class="form-input" id="form-phone" placeholder="Phone" required aria-label="Phone">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-item">
+                        <input type="text" class="form-input" id="form-email" placeholder="Email" required aria-label="Email">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-item">
+                        <textarea id="form-task" class="form-text" placeholder="Task" required></textarea>
+                    </div>
+                </div>
+            </div>
+        <div class="form-row">
+            <div class="col-12">
+                <div class="form-submit">
+                    <!-- Button to generate email template -->
+                    <button id="generateEmailBtn" class="btn">Send</button>
+                    <p class="privacy">I agree to <span>be</span> professional when sending.</p>
+                </div>
+            </div>
+        </div>
+    </form>
+                </div>
             </section>
-            <!-- Case Grid End -->
+            <!-- Contact Form End -->
         </main>
         <!-- Page Content End -->
 
@@ -282,7 +294,7 @@
                                 <a href="https://www.tiktok.com/@vioedge" rel="noopener noreferrer" target="_blank"><i class="fab fa-tiktok"></i></a>
                                 <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.vioedge.com&text=Vioedge%20helps%20as%20many%20businesses%20and%20influencers%20using%20ads%20for%20ROI.%20%F0%9F%9A%80%F0%9F%94%A5%20%23ContentCreation%20%23Advertising" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
                                 <a href="https://www.instagram.com/vioedge" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a>
-                            </div>                               
+                            </div>                                
                         </section>
                     </div>
                     <div class="col-lg-3 col-md-6 col-12">
@@ -317,7 +329,7 @@
             </div>
         </footer>
         <!-- Page Footer End -->
-    </div>
+        </div>
     <!-- Page Wrapper End -->
 
     <!-- Custom Cursor Container -->
@@ -333,15 +345,15 @@
     </div>
 
     <!--== Jquery ==-->
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.min.js" async></script>
     <!--== Bootstrap ==-->
-    <script src="assets/js/bootstrap-5.0.2.min.js"></script>
+    <script src="assets/js/bootstrap-5.0.2.min.js" async></script>
     <!--== Bootstrap ==-->
-    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/swiper.min.js" async></script>
     <!--== Gsap ==-->
-    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/gsap.min.js" async></script>
     <!--== Scroll Trigger ==-->
-    <script src="assets/js/ScrollTrigger.js"></script>
+    <script src="assets/js/ScrollTrigger.js" async></script>
     <!--== Custom Script ==-->
     <script>
         const script = document.createElement('script');
@@ -349,5 +361,66 @@
         script.async = true;
         document.head.appendChild(script);
       </script>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const contactForm = document.querySelector('#contactForm');
+
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        try {
+            const nameInput = document.querySelector('#form-name');
+    const phoneInput = document.querySelector('#form-phone');
+    const emailInput = document.querySelector('#form-email');
+    const taskInput = document.querySelector('#form-task');
+
+    const name = nameInput.value;
+    const phone = phoneInput.value;
+    const email = emailInput.value;
+    const task = taskInput.value;
+
+            if (name.trim() === '' || phone.trim() === '' || email.trim() === '' || task.trim() === '') {
+                alert('Please fill out all the fields.');
+                return;
+            }
+
+            const categories = document.querySelectorAll('input[name="category"]');
+            let selectedCategory = '';
+            categories.forEach(category => {
+                if (category.checked) {
+                    selectedCategory = category.nextElementSibling.textContent;
+                }
+            });
+
+            const subject = encodeURIComponent(`Service - ${selectedCategory}`);
+            const body = `
+            
+Hey Vioedge team,
+
+My interest is in ${selectedCategory.toLowerCase()}.
+Here are some details about my task: ${task}
+Contact me at ${phone} or via email at ${email}.
+
+Best regards,
+${name}`;
+
+const mailtoLink = `mailto:contact.vioedge@gmail.com?subject=${subject}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailtoLink; // This opens the email client
+
+        } catch (error) {
+            console.error('An error occurred:', error);
+            alert('An error occurred. Please try again later.');
+        }
+    });
+});
+
+function openEmailClient(mailtoLink) {
+    // Implement opening the email client with the mailto link
+    // For example:
+    window.location.href = mailtoLink;
+}
+
+</script>
 </body>
 </html>
