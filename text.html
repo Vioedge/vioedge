@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="category-filter">
+        <div class="filter-section" data-filter="all">
+            <span class="label">All</span>
+            <div class="dropdown-content">
+                <div>Option 1</div>
+                <div>Option 2</div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="filter-section" data-filter="category1">
+            <span class="label">Category 1</span>
+            <div class="dropdown-content">
+                <div>Option 1</div>
+                <div>Option 2</div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="filter-section" data-filter="category2">
+            <span class="label">Category 2</span>
+            <div class="dropdown-content">
+                <div>Option 1</div>
+                <div>Option 2</div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="filter-section" data-filter="category3">
+            <span class="label">Category 3</span>
+            <div class="dropdown-content">
+                <div>Option 1</div>
+                <div>Option 2</div>
+            </div>
+        </div>
+    </div>
+    <div id="portfolio">
+        <div class="item" data-category="category1">Item 1</div>
+        <div class="item" data-category="category2">Item 2</div>
+        <div class="item" data-category="category1">Item 3</div>
+        <div class="item" data-category="category3">Item 4</div>
+        <!-- Add more items as needed -->
+    </div>
+    <style>
+        :root {
+            --background-color: #000;
+            --text-color: #fff;
+            --divider-color: #555;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+        .category-filter {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 2px solid var(--divider-color);
+            border-bottom: 2px solid var(--divider-color);
+            padding: 10px;
+            width: 98%;
+            max-width: 1200px;
+        }
+        .filter-section {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+        }
+        .divider {
+            width: 1px;
+            height: 30px;
+            background-color: var(--divider-color);
+        }
+        .label {
+            font-size: 18px;
+        }
+        @media (max-width: 600px) {
+            .category-filter {
+                flex-direction: column;
+            }
+            .divider {
+                width: 80%;
+                height: 1px;
+                margin: 10px auto;
+            }
+            .filter-section {
+                margin-bottom: 10px;
+            }
+        }
+
+        .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content div {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.filter-section:hover .dropdown-content {
+    display: block;
+}
+    </style>
+    <script>
+        document.querySelectorAll('.filter-section').forEach(section => {
+            section.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                document.querySelectorAll('.item').forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'inline-block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
