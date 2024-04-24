@@ -3,3 +3,4 @@ Disallow: work.html
 Disallow: services.html
 Disallow: agency.html
 Disallow: about-video.html
+Disallow: 404.html
