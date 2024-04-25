@@ -1870,7 +1870,7 @@ body.dark-screen .normalCursor, .cursor-dark {
 
 /* Global style variables */
 :root {
-    --main-content-margin-bottom: 500px; /* Default bottom margin for main content */
+    --main-content-margin-bottom: 150px; /* Default bottom margin for main content */
 }
 
 /* Main content area styles */
