@@ -562,40 +562,6 @@ function handleSubmit(email) {
 }
 
 
-    /*
-       =================================
-         Brief Send Button
-       =================================
-    */
-
-       document.addEventListener("DOMContentLoaded", function() {
-        const sendButton = document.getElementById('sendButton');
-        const radioButtons = document.querySelectorAll('input[name="category"]');
-    
-        radioButtons.forEach(radioButton => {
-            radioButton.addEventListener('change', function() {
-                const selectedEmail = this.value;
-                sendButton.setAttribute('onclick', `window.location.href = 'mailto:${selectedEmail}'`);
-            });
-        });
-    });
-    
-    document.addEventListener("DOMContentLoaded", function() {
-        const sendButton = document.getElementById('sendButton');
-        const contactForm = document.getElementById('contactForm');
-    
-        sendButton.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevents the default form submission behavior
-    
-            // Here, you can add your logic to handle the form submission or redirect
-            // For example, opening the user's email client with the provided email address
-            const selectedEmail = getSelectedEmail(); // Implement your logic to get the selected email
-            if (selectedEmail) {
-                window.location.href = `mailto:${selectedEmail}`;
-            }
-        });
-    });
-
 
 
     /*

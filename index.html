@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/css/responsive.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <script src="https://js.sentry-cdn.com/35939435627dc78a72e33a1eb39b79fe.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/algoliasearch/4/algoliasearch-lite.umd.js"></script>
 </head>
 <body id="top">
     <!-- Page Wrapper Start -->
@@ -174,9 +175,6 @@
                 </div>
             </section>
             <!-- Page Heading End -->
-
-
-
 </main>
                 </div>
 
@@ -256,65 +254,17 @@
     <script src="assets/js/main.js"></script>
     
     <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const contactForm = document.querySelector('#contactForm');
+        var client = algoliasearch('6YP1JSBOWQ', '26d7c7f2be7ab35cbe59a4faf45ae5bf');
+        var index = client.initIndex('Website');
 
-    contactForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent form submission
-
-        try {
-            const nameInput = document.querySelector('#form-name');
-    const phoneInput = document.querySelector('#form-phone');
-    const emailInput = document.querySelector('#form-email');
-    const taskInput = document.querySelector('#form-task');
-
-    const name = nameInput.value;
-    const phone = phoneInput.value;
-    const email = emailInput.value;
-    const task = taskInput.value;
-
-            if (name.trim() === '' || phone.trim() === '' || email.trim() === '' || task.trim() === '') {
-                alert('Please fill out all the fields.');
-                return;
-            }
-
-            const categories = document.querySelectorAll('input[name="category"]');
-            let selectedCategory = '';
-            categories.forEach(category => {
-                if (category.checked) {
-                    selectedCategory = category.nextElementSibling.textContent;
-                }
+        document.getElementById('search-input').addEventListener('keyup', function() {
+            index.search(this.value, { hitsPerPage: 10, page: 0 }).then(({ hits }) => {
+                document.getElementById('results').innerHTML = hits.map(hit =>
+                    `<li>${hit.name}</li>`
+                ).join('');
             });
-
-            const subject = encodeURIComponent(`Service - ${selectedCategory}`);
-            const body = `
-            
-Hey Vioedge team,
-
-My interest is in ${selectedCategory.toLowerCase()}.
-Here are some details about my task: ${task}
-Contact me at ${phone} or via email at ${email}.
-
-Best regards,
-${name}`;
-
-const mailtoLink = `mailto:contact.vioedge@gmail.com?subject=${subject}&body=${encodeURIComponent(body)}`;
-        window.location.href = mailtoLink; // This opens the email client
-
-        } catch (error) {
-            console.error('An error occurred:', error);
-            alert('An error occurred. Please try again later.');
-        }
-    });
-});
-
-function openEmailClient(mailtoLink) {
-    // Implement opening the email client with the mailto link
-    // For example:
-    window.location.href = mailtoLink;
-}
-
-</script>
+        });
+    </script>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BXRPF5S1N9"></script>
